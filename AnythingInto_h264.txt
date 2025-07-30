@@ -1,1 +1,1 @@
--map 0 -c:v libx264 -preset veryfast -c:a libfdk_aac 
+-map 0 ${input} -c:v libx264 -preset veryfast -c:a libfdk_aac -y ${output}
