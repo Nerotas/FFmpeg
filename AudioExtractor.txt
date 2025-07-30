@@ -1,0 +1,10 @@
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:1 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_LT.wav; 
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:2 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_RT.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:3 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_MandE_L.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:4 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_MandE_R.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:5 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_L.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:6 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_R.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:7 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_C.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:7 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_LFE.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:9 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_Ls.wav;
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT/* -vn -map 0:10 -c:a copy -y /Volumes/Free_Drive/TRANCODES/DONE/Output_Rs.wav;

@@ -1,0 +1,18 @@
+MPEG w/o Captions:
+ffmpeg -i INPUT -c:v mpeg2video -b:v 80M -pix_fmt yuv422p -field_order progressive -muxrate 80M -vf scale=1920x1080 -f mpegts -c:a pcm_s24le -b:a 192k -y OUTPUT
+
+MPEG w/ Captions:
+ffmpeg -i INPUT -i SUBTITLE -c:v mpeg2video -b:v 80M -pix_fmt yuv422p -field_order progressive -muxrate 80M -vf scale=1920x1080 -f mpegts -c:a pcm_s24le -b:a 192k -c:s copy -y OUTPUT
+
+AVC w/o Captions
+ffmpeg -i INPUT -c:v libx264 -profile:v high -level 40 -b:v 4500k -codec:a libfdk_aac -profile:a aac_low -y OUTPUT
+
+AVC w/ Captions
+ffmpeg -i INPUT -f srt -i SUBTITLE -c:v libx264 -profile:v high -level 40 -b:v 4500k -codec:a libfdk_aac -profile:a aac_low -c:s copy -y OUTPUT
+
+
+ProRes:
+ffmpeg -i INPUT -c:v prores -profile:v 3 -pix_fmt yuv422p10 -field_order progressive -timecode 01:00:00:00 -vf scale=1920x1080 -vf setsar=1 -vf setdar=16:9 -c:a pcm_s24le -y OUTPUT
+
+ProRes w/ Subtitle burn-in:
+ffmpeg -i INPUT -c:v prores -profile:v 3 -pix_fmt yuv422p10 -field_order progressive -timecode 01:00:00:00 -vf scale=1920x1080 -vf setsar=1 -vf setdar=16:9 -vf subtitles=SUBTITLES_FILE -c:a pcm_s24le -y OUTPUT

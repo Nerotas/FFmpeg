@@ -1,0 +1,10 @@
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:1 -c:a copy -y {}_LT.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:2 -c:a copy -y {}RT.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:3 -c:a copy -y {}MandE_L.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:4 -c:a copy -y {}MandE_R.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:5 -c:a copy -y {}L.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:6 -c:a copy -y {}R.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:7 -c:a copy -y {}C.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:7 -c:a copy -y {}LFE.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:9 -c:a copy -y {}Ls.wav \;
+find /Volumes/FREE_DRIVE/TRANCODES/INPUT/ -name "*mov" -exec ffmpeg -i {} -vn -map 0:10 -c:a copy -y {}Rs.wav \;

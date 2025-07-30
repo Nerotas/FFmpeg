@@ -1,0 +1,1 @@
+ffmpeg -i /Volumes/FREE_DRIVE/TRANCODES/INPUT -vcodec mjpeg -pix_fmt yuvj422p -intra -q:v 8 -qmin 1 -vf "drawtext=fontfile=/Library/Fonts/Arial\ Black.ttf: timecode='00\:00\:00\:00': r=23.98: x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000099" —acodec copy y /Volumes/Free_Drive/TRANCODES/DONE/OUTPUT.mp4

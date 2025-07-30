@@ -1,0 +1,1 @@
+ffmpeg -i /Users/Nerotas/Desktop/Raw/*.mkv -vf subtitles=/Users/Nerotas/Desktop/Raw/*.mkv -c:v libx264 -crf 22 -c:a libfdk_aac -b:a 384k -preset:v veryfast -y /Users/Nerotas/Desktop/Converted/*.mkv
